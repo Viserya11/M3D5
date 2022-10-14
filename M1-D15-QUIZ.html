@@ -31,9 +31,46 @@
         */
     -->
 
-  <head></head>
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap"
+      rel="stylesheet"
+    />
+  </head>
   <body>
+    <div class="container">
+      <div id="questionbox" class="hide">
+        <div id="question"><h1 id="h1">Text</h1></div>
+        <div id="answers" class="btn-grd hide">
+          <button class="btn" ><input name="answer" type="radio" id="correctanswer1" value="correctanswer">Answer</button>
+          <button class="btn"><input name="answer" type="radio" value="Answer">Answer</button>
+          <button class="btn"><input name="answer" type="radio" value="Answer">Answer</button>
+          <button class="btn"><input name="answer" type="radio" value="Answer">Answer</button>
+        </div>
+      </div>
+      <div class="controls">
+      <button id="start" class="start-btn">Start</button>
+      <button id="next" class="next-btn hide">Next</button>
+    </div>
     <script>
+
+       const startButton = document.getElementById('start')
+       startButton.addEventListener('click', startIt)
+
+       const questionElement = document.getElementById('questionbox')
+       const questionGrid = document.getElementById('answers')
+
+      function startIt() {
+        startButton.classList.add('hide')
+        questionElement.classList.remove('hide')
+        questionGrid.classList.remove('hide')
+      }
+
+      
+
       const questions = [
         {
           category: "Science: Computers",
@@ -133,6 +170,32 @@
           incorrect_answers: ["Python", "C", "Jakarta"],
         },
       ];
+       
+      let questionsDisplay = function() {
+        for (let i = 0; i < questions.length; i++) {
+         let randomQuestion = questions[i].question;
+         document.getElementById('h1').innerHTML = randomQuestion;
+        }
+         return randomQuestion
+
+      }
+
+      questionsDisplay()
+  
+     let correctDisplay = function() {
+      for (let i = 0; i < questions.length; i++) {
+       let correctAnswer = questions[i].correct_answer;
+        document.getElementById('correctanswer1').innerHTML = correctAnswer;
+       }
+       return correctAnswer
+
+      }
+      correctDisplay()
+
+      //PAIN
+
+
+      
 
       window.onload = function () {
         // HINTS

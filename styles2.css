@@ -1,0 +1,16 @@
+body {
+  font-family: Poppins;
+  background-color: rgb(49, 23, 51);
+}
+.quizblock {
+  display: block;
+  padding-left: 25px;
+  width: 70%;
+  height: 100%;
+  background-color: rgb(222, 222, 222);
+  margin-left: auto;
+  margin-top: 50px;
+  margin-right: auto;
+  margin-bottom: 50px;
+  z-index: 0;
+}
