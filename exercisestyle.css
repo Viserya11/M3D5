@@ -1,0 +1,58 @@
+body {
+  max-width: 70%;
+  margin: 0 auto;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+a {
+  color: rgb(53, 117, 122);
+}
+
+p {
+  margin: 50px;
+}
+
+table,
+th,
+td {
+  border-radius: 20px;
+  border: 2px solid black;
+}
+
+td {
+  border: 2px solid rgb(13, 99, 69);
+  width: 200px;
+  text-align: center;
+}
+
+.changecolorandstyle {
+  font-weight: 600px;
+  font-size: 30px;
+}
+
+.border {
+  border: 2px dotted black;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+img {
+  display: box;
+  width: 200px;
+  border-radius: 20px;
+}
+
+footer {
+  background-color: rgb(42, 133, 102);
+  color: rgb(235, 235, 235);
+  font-family: "Courier New", Courier, monospace;
+  text-align: center;
+  height: 30px;
+  line-height: 30px;
+}
